@@ -21,7 +21,9 @@ RESPONSE_KEYS = {
     "tv": "shows"
 }
 
-@recommend_bp.route('/recommend/tvshowrec', methods=['POST'])
+
+@recommend_bp.route('/recommend/book', methods=['POST'])
+
 def recommend():
     try:
         data = request.get_json()
