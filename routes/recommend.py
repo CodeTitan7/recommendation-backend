@@ -24,7 +24,7 @@ RESPONSE_KEYS = {
 
 @recommend_bp.route('/recommend/book', methods=['POST'])
 
-def recommend():
+def recommend_book():
     try:
         data = request.get_json()
 
@@ -124,8 +124,8 @@ def recommend():
         print(f"Recommend error: {e}")
         return jsonify({"error": "Internal server error"}), 500
 
-@recommend_bp.route('/recommend/book', methods=['POST'])
-def recommend():
+@recommend_bp.route('/recommend/tv', methods=['POST'])
+def recommend_tv():
     try:
         data = request.get_json()
 
@@ -226,7 +226,7 @@ def recommend():
         return jsonify({"error": "Internal server error"}), 500
 
 @recommend_bp.route('/recommend/movies', methods=['POST'])
-def recommend():
+def recommend_movie():
     try:
         data = request.get_json()
 
